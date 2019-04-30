@@ -1,0 +1,872 @@
+/*
+//------------------------------------------------------------------------------
+// Desktop
+//------------------------------------------------------------------------------
+*/
+
+@include respond-to(xl) {
+  header {
+    >.container,
+    >.container-fluid {
+      width: 100%;
+      height: 100% !important;
+      display: block;
+      position: fixed;
+      top: 0px;
+      border: none;
+      z-index: 99;
+      margin: 0 !important;
+      padding: 0px !important;
+      overflow: initial;
+    }
+    .navbar-header {
+      display: none;
+    }
+    .navbar-collapse,
+    .navbar-form {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      &.in {
+        display: block !important;
+        float: left;
+        width: 100%;
+        .tb-megamenu {
+          .nav-collapse.collapse {
+            display: block;
+            margin: 0;
+            &.in {
+              height: 100% !important;
+            }
+
+          }
+        }
+      }
+      &.in{
+        display: block !important;
+        float: left;
+        width: 100%;
+      }
+    }
+    // reset region
+    .region-navigation {
+      width: 100%;
+      z-index: 999;
+      @include respond-to(xl){
+        position: fixed;
+      }
+      .container {
+        padding: 0px;
+        position: initial;
+      }
+      .menu-container-data{
+        @include respond-to(xl){
+          display: none;
+        }
+      }
+    }
+  }
+  // /* ----| Estructura que aplica para los dos menus Mega menu, y menu soy  reset del menu  |----*/
+  .tb-megamenu {
+    background-color: transparent;
+     > .nav-collapse {
+        background-color: transparent;
+      .collapsing {
+        transition: none !important;
+        height: 100% !important;
+      }
+    }
+    ul.level-0 {
+      li.level-1 {
+        &.dropdown,
+        &.dropdown.active {
+          > .dropdown-toggle {
+            color: #696969;
+            background-color: transparent;
+            border: none;
+            text-align: center;
+            @include respond-to(xl) {
+              color: #484851;
+            }
+            &:hover,
+            &:focus {
+              background-color: transparent;
+            }
+            .caret {
+              border: none
+            }
+          }
+        }
+        &.dropdown.open > .dropdown-toggle {
+          background-color: transparent;
+          color: #696969;
+        }
+
+        // global anidacion de lista sud menu  leven 2, 3 ,4 5
+        .tb-megamenu-submenu {
+          // /* ul sudmenu  */
+          .tb-megamenu-subnav {
+            > li {
+              //flecla de sub menu
+              &.dropdown-submenu {
+                > a {
+                  .caret {
+                    width: 16px;
+                    height: 14px;
+                    display: inline-block;
+                    background: url(../img/flechas-menu-soy.png) no-repeat 0px;
+                    background-size: 36px;
+                    transform: rotate(-90deg);
+                    border: none;
+                    margin: 0px;
+                    margin-top: 3px;
+                  }
+                  &::after {
+                    display: none;
+                  }
+                }
+              }
+              // color azul por default
+              > a {
+                color: #696969;
+                background: transparent;
+                border: none;
+                @include respond-to(xl) {
+                color: black;
+                }
+              }
+            }
+          }
+        }
+        // /* ----| Pocicion Ul nivel 1 primer interno, enlaces derecha,  imagen derecha |----*/
+        >.tb-megamenu-submenu {
+          @include respond-to(xl) {
+            width: 100% !important;
+            height: 340px;
+            position: fixed;
+            top: 37px;
+            left: 0;
+            background-color: #ffffff;
+            border: none;
+            padding-left: 0;
+            margin-left: 0 !important;
+            box-shadow: none;
+            overflow: hidden;
+            z-index: 99;
+          }
+          > .mega-dropdown-inner {
+            margin: 0 auto;
+            overflow: hidden;
+            height: 100%;
+            @include respond-to(m) {
+              width: 750px;
+            }
+            @include respond-to(xl) {
+                width: 970px;
+            }
+            @include respond-to(xxxl) {
+                width: 1170px;
+            }
+            > .tb-megamenu-row {
+              @include respond-to(xl) {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+              }
+              //  lista de items
+              > .content-nivel-1 {
+                width: 35%;
+                margin: 0px;
+                .mega-inner {
+                  padding: 0px;
+                }
+                ul.level-1 {
+                  @include respond-to(xl) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    margin: 15px 0 0 0;
+                    height: 310px;
+                    padding: 0;
+                    }
+                  li.level-2 {
+                    @include respond-to(xl) {
+                      padding-left: 15px;
+                      padding-bottom: 12px;
+                      width: 50%;
+                      border-left: 1px solid #c8c8ca;
+                    }
+                    a {
+                      display: initial;
+                      font-family: $latolight;
+                      @include font-size(s);
+                      color: #484851;
+                      line-height: 16.2px;
+                      font-weight: weight(normal);
+                      text-align: left;
+                      border: none;
+                      cursor: pointer;
+                      padding: 3px 0;
+                      margin: 0;
+                      &:hover {
+                        text-decoration:underline;
+                        color: #000;
+                      }
+                    }
+                    .tb-megamenu-submenu {
+                      display: none;
+                    }
+                  }
+                }
+              }
+              // imagen de menu
+              > .content-img {
+                @include respond-to(xl) {
+                  width: 65%;
+                  margin: 0;
+                  margin-top: 15px;
+                  border: none;
+                  display: block;
+                  float: right;
+                  transition: .3s;
+                  &.active {
+                    transition: .3s;
+                  }
+                  a {
+                    margin: 0;
+                  }
+                }
+                .mega-inner {
+                  padding: 0px;
+                }
+                ul {
+                  padding: 0;
+                  margin: 0;
+                  border-left: none !important;
+                  li {
+                    padding: 0;
+                    margin: 0;
+                    a {
+                      @include respond-to(xl) {
+                      height: 300px;
+                      display: block;
+                        .container-menu-image,
+                        .image-menu,
+                        .img-responsive {
+                          height: 300px;
+                          object-fit: cover;
+                        }
+                      }
+                      .container-menu-image {
+                        position: relative;
+                        .menu-title {
+                          width: 98%;
+                          height: 96%;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          position: absolute;
+                          top: 2%;
+                          left: 0;
+                          right: 0;
+                          font-family: $crimson-textregular;
+                          font-size: 23.94px;
+                          color: color(white);
+                          padding: 9PX 10PX;
+                          margin-left: auto;
+                          margin-right: auto;
+                          border: 1px solid white;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              // /* ----| cambio de tamaño de la imagen a desplegar la caja negra |----*/
+              >.content-img.active {
+                width: 47%;
+                @include respond-to(xxxl) {
+                  width: 55%;
+                }
+                // ul li a .img-responsive {
+                //   object-fit: cover;
+                // }
+              }
+              // /* ----| Segundo nivel caja de color negro |----*/
+              .menu-container-data {
+                display: none;
+                &.active {
+                  display: flex;
+                  width: 53%;
+                  @include respond-to(xxxl) {
+                    width: 45%;
+                  }
+                  .box-black {
+                    flex-basis: 40%;
+                    float: left;
+                    background-color: #1e1e1e;
+                    height: 340px;
+                    // Caja negra por fuera del containe
+                    &:before {
+                      content: "";
+                      position: absolute;
+                      top: 0px;
+                      left: 0px;
+                      display: block;
+                      width: 28%;
+                      height: 100%;
+                      background:#1e1e1e;
+                      z-index: -1;
+                    }
+                    p {
+                      padding-top: 20px;
+                      color: #fff;
+                      font-family: Lato, sans-serif;
+                      font-size: .78rem;
+                      cursor: pointer;
+                      &:hover {
+                        opacity: .6;
+                      }
+                      &:before {
+                        content: '';
+                        width: 16px;
+                        height: 14px;
+                        display: inline-block;
+                        background: url(../img/flechas-menu-soy.png) no-repeat -21px 1px;
+                        background-size: 36px;
+                        transform: rotate(-90deg);
+                        border: none;
+                        margin: 0px;
+                        margin-top: 3px;
+                      }
+                    }
+                  }
+                  .container-items {
+                    flex-basis: 60%;
+                    float: left;
+                    margin: 0px !important;
+                    background: white;
+                    .mega-nav {
+                      margin: 20px 0 0 7%;
+                      padding: 0 0 0 20px;
+                      border-left: 1px solid #c8c8ca;
+                      -webkit-box-shadow: none;
+                      box-shadow: none;
+                      a {
+                        font-family: $latolight;
+                        @include font-size(s);
+                        color: #484851;
+                        line-height: 16.2px;
+                        font-weight: weight(normal);
+                        padding: 9px 0;
+                        &:hover {
+                          text-decoration:underline;
+                          color: #000;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        // /* ----| Posicion de imagen a la izquierda |----*/
+        .float-right.tb-megamenu-submenu {
+          .menu-container-data.active ~ div {
+            width: 55% !important;
+          }
+          .menu-container-data {
+            flex-direction: row-reverse;
+            .box-black  {
+              &:before {
+                left: inherit !important;
+                right: 0px;
+              }
+              p {
+                padding-left: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // */ ----| ocultar los hijos |---- /*
+  .tb-megamenu-subnav {
+    .tb-megamenu-submenu  {
+      display: none !important;
+    }
+  }
+  .active-nivel-1,
+  .data-menu {
+    display: none !important;
+  }
+  .data-menu {
+    display: none !important;
+  }
+  // /* ----|  Menu Top Soy |----*/
+  .wrapper-menu-soy {
+      display: block;
+      background-color: #1a1a1a;
+      height: 37px;
+    .container {
+      // /* ----| volver institucional |---- */
+      #block-views-logos-header-block-2 {
+        display: none;
+        float: left;
+        list-style: none;
+        background:#353535;
+        @include respond-to(xl) {
+          display: block;
+        }
+        h2.block-title {
+          display: none;
+        }
+        a {
+          height: 37px;
+          color: color('white');
+          float: left;
+          transition: 0.3s;
+          padding: 8px 25px;
+          @include font-size(xs);
+          font-family: $latolight;
+          border-left: solid 1px #979797;
+          white-space: nowrap;
+          &:hover {
+            text-decoration: none;
+          }
+          &:focus {
+            outline: -webkit-focus-ring-color auto 5px;
+          }
+        }
+      }
+      // /* ----| Menu soy enlaces |----  */
+      .block-tb-megamenu {
+        float: right;
+        .tb-megamenu-menu-menu-top-soy {
+          background-color: transparent;
+          .nav-collapse {
+            &.always-show {
+              // /* ---| Nivel 0 |--- */
+              ul.level-0 {
+                li.level-1:nth-child(1) {
+                  a {
+                    color:  #a9a9a9;
+                    cursor: inherit;
+                    &:hover{
+                      color:  #a9a9a9;
+                      transition: .3s;
+                    }
+                  }
+                }
+                li.level-1 {
+                  height: 37px;
+                  padding: 0 8px;
+                  > a {
+                    @include respond-to(xl){
+                      font-family: $latoregular;
+                      font-weight: 400;
+                      @include font-size(xs);
+                      color: #a9a9a9;
+                      padding: 0px;
+                      background: transparent;
+                      border-right: none;
+                      white-space: nowrap;
+                      transition: .3s;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      height: 100%;
+                      &:hover{
+                        color: color(white);
+                        transition: .3s;
+                      }
+                      &:focus {
+                        outline: -webkit-focus-ring-color auto 5px;
+                      }
+                    }
+                  }
+                  // /* ---| Destacados |--- */
+                  &.menu-destacado {
+                    background: #353535;
+                    padding: 0px;
+                    + .menu-destacado {
+                      border-left: solid 1px #979797;
+                    }
+                    a {
+                      color: color('white');
+                      font-weight: weight(normal);
+                      font-family: $latoregular;
+                      @include font-size(ms);
+                      padding: 0px 13px;
+                    }
+                  }
+                  // /* ---| Nivel 1 |--- */
+                  &.dropdown {
+                    padding: 0px;
+                    > a {
+                      background-color: transparent;
+                      padding-left: 8px;
+                      padding-right: 8px;
+                      font-weight: weight(normal);
+                      font-family: $latoregular;
+                      color: color('gray-menu-soy');
+                      @include font-size(xs);
+                      border-left: solid 1px #979797;
+                      .caret {
+                        content: '';
+                        width: 22px;
+                        height: 8px;
+                        display: block;
+                        background: url(../img/flechas-menu-soy.png) no-repeat 7px;
+                        background-size: cover;
+                        margin: 0px;
+                        border: none;
+                        z-index: 9;
+                      }
+                      &.buttom-guia {
+                        cursor: pointer;
+                        &:hover {
+                          color: color('white');
+                        }
+                        &.active {
+                          background-color: color('white');
+                          color: color('black');
+                          &:hover {
+                            color: color('black');
+                          }
+                          .caret  {
+                            background: url(../img/flechas-menu-soy.png) no-repeat -14px;
+                            background-size: cover;
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      // /* ----| Cambio de idioma  |----  */
+      #block-lang-dropdown-language {
+        position: relative;
+        padding-right: 10px;
+        @include respond-to(xl){
+          display: block;
+          padding: 0px;
+          float: right;
+        }
+        .block-title {
+          display: none;
+        }
+        .form-type-select {
+          width: 80px;
+          display: inline-block;
+          position: relative;
+          font-size: 16px;
+          color: #fff;
+          cursor: pointer;
+          margin: 0px;
+          select {
+            visibility: hidden;
+            padding-right: 10px;
+
+          }
+          .container-language {
+            font-family: $latoregular;
+            @include font-size(xs);
+            color: #a9a9a9;
+            text-transform: capitalize;
+            vertical-align: middle;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 8px 15px;
+            transition: all 0.2s ease-in;
+            &:after {
+              content: "";
+              width: 16px;
+              height: 14px;
+              background: url(../img/flechas-menu-soy.png) no-repeat 0px;
+              background-size: 36px;
+              position: absolute;
+              right: 10px;
+              top: 10px;
+            }
+          }
+          .select-options {
+            display: none;
+            position: absolute;
+            top: 45px;
+            right: 0;
+            z-index: 999;
+            margin: 0;
+            padding: 15px 20px;
+            list-style: none;
+            background-color: black;
+            &.active {
+              display: block;
+            }
+            &:before {
+              content: '';
+              width: 0;
+              height: 0;
+              border-left: 10px solid transparent;
+              border-right: 10px solid transparent;
+              border-bottom: 10px solid #000;
+              position: absolute;
+              top: -10px;
+              right: 10px;
+            }
+            li {
+              margin-bottom: 2px;
+              padding: 0 5px;
+              a {
+                font-family: $latoregular;
+                @include font-size(ms);
+                color: color('white');
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // /* ----|  Mega Menu Destock |----*/
+  .wrapper-mega-menu {
+    // /* ----| Logos |---- */
+    #block-views-logos-header-block {
+      display: block;
+      width: 25%;
+      float: left;
+      padding: 10px 20px;
+      //title
+      .block-title {
+        display: none;
+      }
+      .views-row {
+        width: 50%;
+        float: left;
+        &:nth-child(odd) {
+          padding-right: 10px;
+        }
+        &:nth-child(even) {
+          padding-left: 10px;
+          border-left: 1px solid black;
+          p {
+            padding-top: 5px;
+          }
+        }
+        p {
+          svg {
+            vertical-align: middle;
+            max-height: 50px;
+          }
+          svg text,
+          svg .cls-1 {
+            fill: black;
+          }
+        }
+      }
+    }
+    // /* ----| Lista Menu |---- */
+    #block-tb-megamenu-menu-mega-menu {
+      width: auto;
+      float: right;
+      .tb-megamenu-menu-mega-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         //ocultar boton de despliege en movil
+        .tb-megamenu-button {
+          display: none;
+        }
+        .always-show {
+        // /* ----| Nivel 0 item del menu |---- */
+          ul.level-0.nav {
+            display: flex;
+            li.level-1 {
+              width: 115px;
+              height: 74px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 0 5px;
+              margin: 0;
+             @include respond-to(xxxl) {
+                width: 136px;
+             }
+              &.open {
+                background-color: #1a1a1a;
+                border: none;
+                box-shadow: none;
+                @include respond-to(xl) {
+                  background-color: #FFFFFF;
+                }
+                > a.dropdown-toggle {
+                  @include respond-to(xl) {
+                    opacity: .6;
+                    transition: .3s;
+                  }
+                }
+              }
+              > a {
+                font-weight: weight(normal);
+                font-family: $latoregular;
+                font-size: 14.94px;
+                color: #484851;
+                background-color: transparent !important;
+                text-align: center;
+                border: none;
+                padding: 10px 0;
+                opacity: 1;
+                transition: .3s;
+                &.text-hover {
+                  color: color('grey');
+                  opacity: 1 !important;
+                  transition: .3s;
+                }
+                &:focus {
+                  outline: -webkit-focus-ring-color auto 5px;
+                }
+                &.dropdown-toggle{
+                  &::after{
+                    display: none;
+                  }
+                  &:hover{
+                    background: transparent;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // /* ----| Bloque buscar |---- */
+  #block-tb-megamenu-menu-mega-menu{
+    float: right;
+    .block-title {
+      display: none;
+    }
+    .barra-buscar {
+      span {
+        width: 18px;
+        height: 23px;
+        display: block;
+        font-size: 0;
+        background: url(../img/Icon/icon-lupa.png) no-repeat center;
+        background-size: 18px;
+        background-position: 1px -17px;
+        z-index: 9;
+        cursor: pointer;
+      }
+      &.icon-close{
+        &span{
+
+          background: url(../img/Icon/icon-cerrar.png) no-repeat center;
+        }
+      }
+    }
+  }
+  // /* ----|  BuscarDestock |----*/
+  .wrapper-buscar-menu {
+    background: #fffefe;
+    height: 80px;
+    transition: .3s;
+    display: none;
+    .block-title,
+    #google-cse-results,
+    label {
+      display: none;
+    }
+    #google-cse-results-searchbox-form {
+      position: relative;
+    }
+    .form-item input {
+      width: 100%;
+      height: 50px;
+      font-family: $latolight;
+      @include font-size(xxl);
+      color: #484851;
+      background: none !important;
+      background-image: none !important;
+      border: none !important;
+      border-radius: 0px;
+      padding: 5px 0 !important
+    ¿;
+      box-shadow: none;
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+    }
+    button {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translate3d(0, -50%, 0);
+      background: none;
+      border:none;
+      box-shadow: none;
+      padding: 0px;
+      border-radius: 0px;
+      font-size: 0px;
+      &:before {
+        content: '';
+        width: 30px;
+        height: 30px;
+        display: block;
+        background: url(../img/Icon/icon-lupa-search.png) no-repeat;
+        background-size: cover;
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent !important;
+        border: none;
+        box-shadow: none;
+        outline: none !important;
+      }
+    }
+  }
+  //position fixel par el menu y el primer despliege del menu
+  .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .nav-collapse  .tb-megamenu-item.level-1.dropdown.open .tb-megamenu-submenu{
+    top: 110px;
+  }
+  .front.logged-in,
+  .not-front.logged-in.admin-menu {
+    header > .container-fluid {
+      top: 28px;
+    }
+    header .container-fluid .navbar-header {
+      @include respond-to(xl) {
+        top: 88px;
+      }
+    }
+    // primer desplige del menu
+    .wrapper-menu-soy #block-tb-megamenu-menu-menu-top-soy .tb-megamenu-menu-menu-top-soy .tb-megamenu-nav.level-0 .dropdown.open .tb-megamenu-submenu {
+      top: 65px;
+    }
+    .wrapper-mega-menu #block-tb-megamenu-menu-mega-menu .tb-megamenu-menu-mega-menu .nav-collapse  .tb-megamenu-item.level-1.dropdown.open .tb-megamenu-submenu {
+      top: 139px;
+    }
+  }
+  body.dark-layer::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, .4);
+    z-index: 99;
+  }
+}

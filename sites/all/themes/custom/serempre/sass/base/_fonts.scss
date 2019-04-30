@@ -1,0 +1,357 @@
+// Font faces
+//
+// Instead of relying on the fonts that are available on a user's computer, you
+// can use web fonts which, like images, are resources downloaded to the user's
+// browser. Because of the bandwidth and rendering resources required, web fonts
+// should be used with care.
+//
+// Numerous resources for web fonts can be found on Google. Here are a few
+// websites where you can find Open Source fonts to download:
+// - http://www.fontsquirrel.com/fontface
+// - http://www.theleagueofmoveabletype.com
+//
+// In order to use these fonts, you will need to convert them into formats
+// suitable for web fonts. We recommend the free-to-use Font Squirrel's
+// Font-Face Generator:
+//   http://www.fontsquirrel.com/fontface/generator
+//
+// The following is an example @font-face declaration. This font can then be
+// used in any ruleset using a property like this:  font-family: Example, serif;
+//
+// Since we're using Sass, you'll need to declare your font faces here, then you
+// can add them to the font variables in the _init.scss partial.
+
+// @font-face {
+//     font-family: 'roboto_condensedregular';
+//     src: url('../fonts/Roboto/robotocondensed-regular-webfont.woff2') format('woff2'),
+//          url('../fonts/Roboto/robotocondensed-regular-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+$font-primary:       '../fonts/Roboto_Mono' !default;
+$font-secondary:     '../fonts/Rubik' !default;
+
+@font-face {
+    font-family: 'RobotoMono-Bold';
+    src: url('#{$font-primary}/RobotoMono-Bold.ttf') format('truetype');
+    // src: url('#{$font-primary}/crimsontext-bold-webfont.woff2') format('woff2'),
+    // url('#{$font-primary}/crimsontext-bold-webfont.woff') format('woff');
+    // font-weight: bold;
+    // font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono-BoldItalic';
+    src: url('#{$font-primary}/RobotoMono-BoldItalic.ttf') format('truetype');
+    // src: url('#{$font-primary}/crimsontext-bold-webfont.woff2') format('woff2'),
+    // url('#{$font-primary}/crimsontext-bold-webfont.woff') format('woff');
+    // font-weight: bold;
+    // font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono-Italic';
+    src: url('#{$font-primary}/RobotoMono-Italic.ttf') format('truetype');
+    // font-weight: bold;
+    // font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono-Light';
+    src: url('#{$font-primary}/RobotoMono-Light.ttf') format('truetype');
+    // font-weight: bold;
+    // font-style: normal;
+}
+
+@font-face {
+    font-family: 'RobotoMono-LightItalic';
+    src: url('#{$font-primary}/RobotoMono-LightItalic.ttf') format('truetype');
+    // font-weight: bold;
+    // font-style: normal;
+}
+@font-face {
+    font-family: 'RobotoMono-Regular';
+    src: url('#{$font-primary}/RobotoMono-Regular.ttf') format('truetype');
+    // font-weight: bold;
+    // font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'Rubik-Black';
+  src: url('#{$font-secondary}/Rubik-Black.ttf') format('truetype');
+  // src: url('#{$font-secondary}/lato-bold-webfont.woff2') format('woff2'),
+  // url('#{$font-secondary}/lato-bold-webfont.woff') format('woff');
+  // font-weight: 700;
+  // font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik-Bold';
+  src: url('#{$font-secondary}/Rubik-Bold.ttf') format('truetype');
+  // src: url('#{$font-secondary}/lato-bold-webfont.woff2') format('woff2'),
+  // url('#{$font-secondary}/lato-bold-webfont.woff') format('woff');
+  // font-weight: 700;
+  // font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rubik-Regular';
+  src: url('#{$font-secondary}/Rubik-Regular.ttf') format('truetype');
+  // font-weight: bold;
+  // font-style: normal;
+}
+
+
+
+// Icons ADC
+// $icomoon-font-path: '../fonts/Icons' !default;
+
+
+// @font-face {
+//   font-family: 'icoadc';
+//   src:  url('#{$icomoon-font-path}/icoadc.eot?1xqduc');
+//   src:  url('#{$icomoon-font-path}/icoadc.eot?1xqduc#iefix') format('embedded-opentype'),
+//     url('#{$icomoon-font-path}/icoadc.ttf?1xqduc') format('truetype'),
+//     url('#{$icomoon-font-path}/icoadc.woff?1xqduc') format('woff'),
+//     url('#{$icomoon-font-path}/icoadc.svg?1xqduc#icoadc') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+// [class^='icon-'],
+// [class*='icon-'] {
+//   /* use !important to prevent issues with browser extensions that change fonts */
+//   font-family: 'icoadc' !important;
+//   speak: none;
+//   font-style: normal;
+//   font-weight: normal;
+//   font-variant: normal;
+//   text-transform: none;
+//   line-height: 1;
+
+//   /* Better Font Rendering =========== */
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// .icon-twitter .path1:before {
+//   content: '\e92c';
+//   color: rgb(29, 29, 27);
+// }
+
+// .icon-twitter .path2:before {
+//   content: '\e92d';
+//   margin-left: -1em;
+//   color: rgb(255, 255, 255);
+// }
+
+// .icon-twitter-default:before {
+//   content: '\e92c';
+// }
+
+// .icon-foro-2:before {
+//   content: '\e92e';
+// }
+
+// .icon-chat:before {
+//   content: '\e92f';
+// }
+
+// .icon-biblioteca:before {
+//   content: '\e930';
+// }
+
+// .icon-libro:before {
+//   content: '\e931';
+// }
+
+// .icon-menu:before {
+//   content: '\e900';
+// }
+
+// .icon-punto:before {
+//   content: '\e901';
+// }
+
+// .icon-calendario-2:before {
+//   content: '\e902';
+// }
+
+// .icon-images:before {
+//   content: '\e903';
+// }
+
+// .icon-tool:before {
+//   content: '\e904';
+// }
+
+// .icon-docu:before {
+//   content: '\e905';
+// }
+
+// .icon-agregar:before {
+//   content: '\e906';
+// }
+
+// .icon-editar:before {
+//   content: '\e907';
+// }
+
+// .icon-email-2:before {
+//   content: '\e908';
+// }
+
+// .icon-calendario:before {
+//   content: '\e909';
+// }
+
+// .icon-telefono:before {
+//   content: '\e90a';
+// }
+
+// .icon-email:before {
+//   content: '\e90b';
+// }
+
+// .icon-ok-doc:before {
+//   content: '\e90c';
+// }
+
+// .icon-buscar-doc:before {
+//   content: '\e90d';
+// }
+
+// .icon-perfil:before {
+//   content: '\e90e';
+// }
+
+// .icon-actualizar:before {
+//   content: '\e90f';
+// }
+
+// .icon-carrito:before {
+//   content: '\e910';
+// }
+
+// .icon-cerrar:before {
+//   content: '\e911';
+// }
+
+// .icon-pregunta:before {
+//   content: '\e912';
+// }
+
+// .icon-ok:before {
+//   content: '\e913';
+// }
+
+// .icon-document:before {
+//   content: '\e914';
+// }
+
+// .icon-link:before {
+//   content: '\e915';
+// }
+
+// .icon-play:before {
+//   content: '\e916';
+// }
+
+// .icon-book:before {
+//   content: '\e917';
+// }
+
+// .icon-mensaje:before {
+//   content: '\e918';
+// }
+
+// .icon-ayuda:before {
+//   content: '\e919';
+// }
+
+// .icon-education:before {
+//   content: '\e91a';
+// }
+
+// .icon-herramientas:before {
+//   content: '\e91b';
+// }
+
+// .icon-felcha:before {
+//   content: '\e91c';
+// }
+
+// .icon-buscar:before {
+//   content: '\e91d';
+// }
+
+// .icon-home:before {
+//   content: '\e91e';
+// }
+
+// .icon-recurso-1:before {
+//   content: '\e91f';
+// }
+
+// .icon-facebook:before {
+//   content: '\e920';
+// }
+
+// .icon-ver-más:before {
+//   content: '\e921';
+// }
+
+// .icon-ayuda-2:before {
+//   content: '\e922';
+// }
+
+// .icon-rss:before {
+//   content: '\e923';
+// }
+
+// .icon-instagram-default {
+//   content: '\e924';
+// }
+
+// .icon-instagram .path1:before {
+//   content: '\e924';
+//   color: rgb(66, 66, 66);
+// }
+
+// .icon-instagram .path2:before {
+//   content: '\e925';
+//   margin-left: -1em;
+//   color: rgb(255, 255, 255);
+// }
+
+// .icon-instagram .path3:before {
+//   content: '\e926';
+//   margin-left: -1em;
+//   color: rgb(255, 255, 255);
+// }
+
+// .icon-instagram .path4:before {
+//   content: '\e927';
+//   margin-left: -1em;
+//   color: rgb(255, 255, 255);
+// }
+
+// .icon-pinterest:before {
+//   content: '\e928';
+// }
+
+// .icon-alerta-mail:before {
+//   content: '\e929';
+// }
+
+// .icon-foros:before {
+//   content: '\e92a';
+// }
+
+// .icon-chat2:before {
+//   content: '\e92b';
+// }
+

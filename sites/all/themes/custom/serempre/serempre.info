@@ -1,0 +1,35 @@
+name = serempre
+description = Theme test is serempre.
+core = 7.x
+base theme = bootstrap
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; SimplyTest.me
+;;;;;;;;;;;;;;;;;;;;;
+
+stylesheets[all][] = css/style.css
+;scripts[] = js/scripts.js
+;simplytest_dependencies[] = jquery_update
+
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Regions
+;;;;;;;;;;;;;;;;;;;;;
+
+regions[navigation]     = 'Navigation'
+regions[header]         = 'Top Bar'
+regions[highlighted]    = 'Highlighted'
+regions[help]           = 'Help'
+regions[content]        = 'Content'
+regions[sidebar_first]  = 'Primary'
+regions[sidebar_second] = 'Secondary'
+regions[footer]         = 'Footer'
+regions[page_top]       = 'Page top'
+regions[page_bottom]    = 'Page bottom'
+
+;;;;;;;;;;;;;;;;;;;;;
+;; Config Bootstrap Settings
+;;;;;;;;;;;;;;;;;;;;;
+
+settings[bootstrap_fluid_container] = 1

@@ -1,0 +1,146 @@
+// Variables
+//
+// Set variables for this site before a library sets its !default value.
+//
+// Style guide: sass.variables
+
+
+// Browser support
+//
+// For older versions of browsers, some Sass relies on the `support-for()` to
+// control whether extra CSS is needed to be output. The `support-for()`
+// function and the `$support-for` variable are documented on the [support-for
+// homepage](https://github.com/JohnAlbin/support-for).
+//
+// Style guide: sass.variables.support-for
+
+// Support the same browsers as normalize.css v3.
+// Possible keys: chrome, edge, firefox, ie, opera, safari, '*'
+$support-for: (
+  ie:  11,
+  // The last 4 versions of all other browsers.
+  '*': -4,
+)!default;
+
+
+// Font faces, stacks and sizes.
+//
+// Font styling and line heights are controlled by the several variables that
+// used by mixins like `type-layout()`, `margin-top()`, and `margin-bottom()`.
+// These variable and mixins are documented on the [Typey
+// homepage](https://github.com/jptaranto/typey).
+//
+// Style guide: sass.variables.typey
+
+// The font size set on the root html element.
+$base-font-size:    16px;
+
+// The base line height determines the basic unit of vertical rhythm.
+$base-line-height:  24px;
+
+
+// The font sizes in our type hierarchy as tee shirt sizes.
+$font-size: (
+  xxxl:             43px,
+  xxl:              31px,
+  xl:               24px,
+  ll:               23px,
+  sl:               20px,
+  l:                19px,
+  o:                18px,
+  m:                $base-font-size,
+  ms:               15px,
+  s:                14px,
+  xs:               13px,
+  xxs:              12px,
+  xxxs:             11px,
+  a:                10px
+) !default;
+
+// Typey allows you to alter font weights site-wide with this map.
+$font-weight: (
+  bold:             bold,
+  medium:           500,
+  normal:           normal,
+  light:            300,
+  lighter:          lighter,
+);
+
+// The following font family declarations use widely available fonts.
+// A user's web browser will look at the comma-separated list and will
+// attempt to use each font in turn until it finds one that is available
+// on the user's computer. The final "generic" font (sans-serif, serif or
+// monospace) hints at what type of font to use if the web browser doesn't
+// find any of the fonts in the list.
+
+
+// Sans-serif font stacks.
+$RobotoMono-Bold:         'RobotoMono-Bold', 'Arial Narrow', Helvetica, sans-serif;
+$RobotoMono-BoldItalic:   'RobotoMono-BoldItalic', 'Arial Narrow', Helvetica, sans-serif;
+$RobotoMono-Italic:       'RobotoMono-Italic', 'Arial Narrow', Helvetica, sans-serif;
+$RobotoMono-Light:        'RobotoMono-Light', 'Arial Narrow', Helvetica, sans-serif;
+$RobotoMono-LightItalic:  'RobotoMono-LightItalic', 'Arial Narrow', Helvetica, sans-serif;
+$RobotoMono-Regular:      'RobotoMono-Regular', 'Arial Narrow', Helvetica, sans-serif;
+$Rubik-Black:             'Rubik-Black', 'Arial Narrow', Helvetica, sans-serif;
+$Rubik-Bold:              'Rubik-Bold', 'Arial Narrow', Helvetica, sans-serif;
+$Rubik-Regular:           'Rubik-Regular', 'Arial Narrow', Helvetica, sans-serif;
+
+
+
+// Monospace font stacks.
+// For an explanation of why "sans-serif" is at the end of this list, see
+// http://meyerweb.com/eric/thoughts/2010/02/12/fixed-monospace-sizing/
+$menlo:           Menlo, 'DejaVu Sans Mono', 'Ubuntu Mono', Courier, 'Courier New', monospace, sans-serif;
+
+// The font faces you specify in the $typefaces map can be used in the
+// typeface() mixin.
+$typefaces: (
+  body: (
+    font-family: $RobotoMono-Regular,
+  ),
+  monospace: (
+    font-family: $menlo,
+  ),
+  compact: (
+    font-family: $RobotoMono-Regular,
+    weight: 900,
+    case: uppercase,
+    // We could also specify the following property:
+    // letter-spacing: .5px,
+  ),
+);
+
+// Output a horizontal grid to help with debugging typography.
+$typey-debug: false;
+
+// The length unit in which to output font size and margin values.
+// Supported values: px, em, rem.
+$base-unit:         'rem';
+
+// px fallbacks for rem units are needed for IE 8 and earlier.
+$rem-fallback:      false;
+
+$auto-print-sizing: false;
+
+$line-height-method: ratio;
+
+// Breakpoints
+//
+// Use the `respond-to()` mixin to use named breakpoints. Documentation is
+// available in the [Breakpoint wiki
+// pages](https://github.com/at-import/breakpoint/wiki/Respond-To).
+//
+// Style guide: sass.variables.breakpoints
+
+@include add-breakpoint(xxxs, (333px, 'no-query' true));
+@include add-breakpoint(xxs,  (444px, 'no-query' true));
+@include add-breakpoint(xs,   (555px, 'no-query' true));
+@include add-breakpoint(s,    (666px, 'no-query' true));
+@include add-breakpoint(m,    (768px, 'no-query' true));
+@include add-breakpoint(l,    (888px, 'no-query' true));
+@include add-breakpoint(xl,   (992px, 'no-query' true));
+@include add-breakpoint(xxl,  (1111px));
+@include add-breakpoint(xxxl, (1200px));
+
+// Output media queries where the above px are converted to ems.
+// @include breakpoint-set('to ems', true);
