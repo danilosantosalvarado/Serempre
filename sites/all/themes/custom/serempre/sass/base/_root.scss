@@ -25,7 +25,7 @@ body {
   // $typey-debug variable will toggle its output.
   // @include typey-debug-grid();
   // Remove default margin and padding.
-  font-family: $latoregular;
+  font-family: $RobotoMono-Regular;
   @include font-size('s');
   color: color('text');
   background-color: color('text-bg');
