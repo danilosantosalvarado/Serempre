@@ -1,0 +1,76 @@
+/*
+//------------------------------------------------------------------------------
+// Home Views Welcome
+//------------------------------------------------------------------------------
+*/
+
+.view-welcome {
+  position: relative;
+  .Banner-welcome {
+    .views-field-field-baner-desktop {
+      display: none;
+      @include respond-to(s) {
+        display: block;
+      }
+    }
+    .views-field-field-banner-mobil {
+      @include respond-to(s) {
+        display: none;
+      }
+    }
+    .Banner-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      max-width: 700px;
+      transform: translate3d(-50%, -50%, 0px);
+      @include respond-to(xl) {
+        max-width: 700px;
+      }
+      p {
+        font-family: $Rubik-Regular;
+        @include font-size(m);
+        color: rgb(255, 255, 255);
+        text-align: center;
+        @include respond-to(xl) {
+          @include font-size(xl);
+        }
+      }
+      h1 {
+        font-family: $Rubik-Black;
+        color: rgb(255, 255, 255);
+        line-height: 0.93;
+        text-transform: uppercase;
+        text-align: center;
+        @include respond-to(m) {
+          @include font-size(xl);
+        }
+        @include respond-to(l) {
+          @include font-size(xxxl);
+        }
+        @include respond-to(xl) {
+          font-size: 50px;
+        }
+        @include respond-to(xxxl) {
+          font-size: 80px;
+        }
+      }
+      .views-field-view-node {
+        a {
+          width: 100%;
+          display: block;
+          font-family: $Rubik-Regular;
+          @include font-size(s);
+          color: color('white');
+          text-align: center;
+          text-transform: uppercase;
+          line-height: 1.2;
+          padding: 1.0em .7em;
+          border: 3px solid color('white');
+          max-width: 150px;
+          margin: 0px auto;
+        }
+      }
+    }
+  }
+}

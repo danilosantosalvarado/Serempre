@@ -8,7 +8,7 @@ base theme = bootstrap
 ;; SimplyTest.me
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = css/style.css
+stylesheets[all][] = css/styles.css
 ;scripts[] = js/scripts.js
 ;simplytest_dependencies[] = jquery_update
 

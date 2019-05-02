@@ -104,6 +104,13 @@ $font-secondary:     '../fonts/Rubik' !default;
   // font-style: normal;
 }
 
+@font-face {
+  font-family: 'Rubik-Light';
+  src: url('#{$font-secondary}/Rubik-Light.ttf') format('truetype');
+  // font-weight: bold;
+  // font-style: normal;
+}
+
 
 
 // Icons ADC
