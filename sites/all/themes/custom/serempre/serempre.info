@@ -9,7 +9,7 @@ base theme = bootstrap
 ;;;;;;;;;;;;;;;;;;;;;
 
 stylesheets[all][] = css/styles.css
-;scripts[] = js/scripts.js
+scripts[] = js/scripts.js
 ;simplytest_dependencies[] = jquery_update
 
 
