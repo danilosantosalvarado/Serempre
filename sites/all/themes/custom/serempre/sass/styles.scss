@@ -27,18 +27,18 @@
 @import 'base/fonts';
 @import 'base/normalize';
 
-// Layouts
+// Page
 //
 // The layout styling for major parts of the page that are included with the
 // theme. Note: some Panels layouts are included in other parts of the system
 // and are not documented.
 //
 // Style guide: layouts
-
 @import 'page/welcome';
-// @import 'deca/eventos/home-eventos';
+@import 'page/story-about';
+@import 'page/facts';
 
-// Navigation
+// Abstracts
 //
 // Navigation components are specialized design components that are used for
 // page navigation.
@@ -46,15 +46,18 @@
 // Weight: 3
 //
 // Style guide: navigation
+@import 'abstracts/placeholders';
 
-@import 'layout/footer';
-@import 'layout/menu_desktop';
-
-// Forms
+// Layout
 //
-// Form components are specialized design components that are applied to forms
-// or form elements.
+// Navigation components are specialized design components that are used for
+// page navigation.
 //
 // Weight: 3
 //
-// Style guide: forms
+// Style guide: navigation
+@import 'layout/header';
+
+
+// Architecture documentation sass
+// https://sass-guidelin.es/es/#arquitectura
